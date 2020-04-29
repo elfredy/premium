@@ -1,0 +1,20 @@
+.fakeButton {
+    width: 50%;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    transition: all 0.3s;
+    opacity: 0;
+
+    & span {
+        @include font($rbrgl, 1.7rem, $color-white);
+        margin-right: 2rem;
+        @include respondmax(lg) {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include respondmax(md) {
+        width: 80%;
+    }
+}

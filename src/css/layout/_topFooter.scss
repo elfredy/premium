@@ -1,0 +1,109 @@
+.topFooter {
+    margin-top: 4rem;
+    border: 1px solid $color-primary;
+    padding: 3rem 0;
+    position: relative;
+    @include respondmax(md) {
+        margin-top: 2.4rem;
+        padding: 1.5rem 0;
+    }
+
+    &__number {
+        @include font($rbrgl, 3.6rem, $color-pink-dark);
+        background-color: $color-white;
+        position: absolute;
+        left: 50%;
+        top: -2.3rem;
+        transform: translateX(-50%);
+        width: 25rem;
+        text-align: center;
+
+        @include respondmax(lg) {
+            font-size: 2.4rem;
+            top: -1.4rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 1.8rem;
+        }
+        @include respondmax(sm) {
+            font-size: 1.5rem;
+            width: 18rem;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        & h5 {
+            @include font($rblg, 2.4rem, $color-grey-dark);
+            text-transform: uppercase;
+            margin-top: 2rem;
+
+            @include respondmax(xl) {
+                font-size: 2rem;
+                margin-top: 1.8rem;
+            }
+
+            @include respondmax(md) {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            @include respondmax(sm) {
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        & p {
+            @include font(rblg, 1.7rem, $color-grey-dark);
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 56rem;
+            line-height: 2;
+            margin-top: 1rem;
+            max-height: 10rem;
+            overflow: hidden;
+
+            @include respondmax(xl) {
+                font-size: 1.5rem;
+            }
+
+            @include respondmax(md) {
+                font-size: 1.3rem;
+            }
+
+            @include respondmax(sm) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    &__mail {
+        text-decoration: none;
+        color: $color-primary;
+        display: block;
+        &:hover {
+            color: $color-pink-dark;
+            text-decoration: none;
+        }
+    }
+
+    &__sosial {
+        text-align: center;
+        margin-top: 3rem;
+        & a {
+            text-decoration: none;
+            transition: all 0.3s;
+
+            &:hover {
+                text-decoration: none;
+                opacity: 0.7;
+            }
+        }
+
+        & a:not(:first-child) {
+            margin-left: 1.6rem;
+        }
+    }
+}

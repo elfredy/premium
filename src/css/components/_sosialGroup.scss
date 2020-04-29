@@ -1,0 +1,70 @@
+.langLink {
+    display: flex;
+    justify-content: space-between;
+
+    @include respondmax(md){
+        display: inline-block;
+    }
+
+
+    .langLink__item {
+        @include font($rbrgl, 1.8rem, $color-primary);
+        text-decoration: none;
+       
+        @include respondmax(xl){
+            font-size: 1.2rem;
+        }
+
+        @include respondmax(lg){
+            font-size: .8rem;
+        }
+
+       
+        transition: all 0.3s;
+        &:hover {
+            color: $color-pink-dark;
+           text-decoration: underline;
+        }
+
+        &:not(:last-child)::after{
+            content: "|";
+            padding-left: .5rem;
+        }
+
+        &:not(:last-child){
+            margin-right: .8rem;
+        }
+
+        &:not(:first-child){
+            margin-left: auto;
+        }
+
+        
+
+    }
+
+}
+
+.sosialLink {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .6rem;
+    transition: all .3s;
+
+    &__item{
+        
+        &:hover{
+            opacity: .65;
+        }
+
+        @include respondmax(md){
+            &:not(:first-child){
+                margin-left: .5rem;
+            }
+        }
+    }
+
+    @include respondmax(md){
+        display: inline-block;
+    }
+}

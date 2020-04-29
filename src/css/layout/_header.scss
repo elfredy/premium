@@ -1,0 +1,31 @@
+.header{
+    height: 15rem;
+    background-color: $color-white;
+
+    @include respondmax(xl){
+        height: 10rem;
+        padding: 1rem 0;
+    }
+    @include respondmax(lg){
+        height: 8rem;
+    }
+
+    @include respondmax(sm){
+        height: 6rem;
+    }
+    .navbar-brand{
+        width: 18rem;
+
+        @include respondmax(xl){
+            width: 10rem;
+           
+        
+        }
+
+        @include respondmax(lg){
+            width: 8rem;
+          
+        
+        }
+    }
+}

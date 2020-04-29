@@ -1,0 +1,84 @@
+.footerNav {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respondmax(sm){
+        display: block;
+        height: 100%;
+    }
+    
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__item {
+        max-width: 20rem;
+        border-top: 2.5px solid transparent;
+        border-bottom: 2.5px solid transparent;
+        margin: 0.6rem 0.8rem;
+        padding: 1.2rem 0.5rem;
+        transition: all 0.3s;
+        display: inline-block;
+        &:hover {
+            border-top: 2.5px solid $color-primary;
+            border-bottom: 2.5px solid $color-primary;
+            margin: 1.2rem 0.8rem;
+            padding: 0.6rem 0.5rem;
+
+            @include respondmax(sm){
+                margin: .8rem .5rem;
+            }
+        }
+
+        @include respondmax(xl) {
+            max-width: 14rem;
+        }
+
+        @include respondmax(lg) {
+            max-width: 12rem;
+        }
+
+        @include respondmax(sm){
+            display: block;
+            max-width: 100%;
+            text-align: center;
+            padding: 0.8rem .5rem;
+        }
+    
+    }
+
+    &__link {
+        @include font($rbrgl, 1.8rem, $color-secondary);
+        text-decoration: none;
+
+        transition: all 0.4s;
+
+        @include respondmax(xl) {
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 1rem;
+        }
+
+        @include respondmax(md){
+            font-size: .7rem;
+        }
+
+        @include respondmax(sm){
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+
+    .active {
+        color: $color-primary;
+    }
+}

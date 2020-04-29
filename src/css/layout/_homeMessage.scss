@@ -1,0 +1,114 @@
+.homeMessage {
+    padding: 5rem 0;
+    background-color: $color-pink-dark;
+
+    @include respondmax(lg){
+        padding: 3rem 0;
+    }
+
+    @include respondmax(md){
+        padding: 1.8rem 0;
+    }
+
+    @include respondmax(sm){
+        padding: 1.2rem 0;
+    }
+
+   
+
+    &__text{
+        max-width: 50%;
+        text-align: center;
+        padding: 5rem 0;
+        padding-bottom: 0;
+
+        @include respondmax(xl){
+            padding: 3.5rem 0;
+        }
+
+        @include respondmax(lg){
+            padding: 1.5rem 0;
+            max-width: 65%;
+        }
+
+        @include respondmax(sm){
+            padding: .5rem 0;
+            max-width: 100%;
+        }
+
+        & p{
+            @include font($rblg,1.7rem,$color-white);
+
+            @include respondmax(xl){
+                font-size: 1.5rem;
+            }
+
+            @include respondmax(lg){
+                font-size: 1.3rem;
+            }
+
+            @include respondmax(sm){
+                font-size: 1.1rem;
+            }
+
+
+        }
+    }
+
+    &__form{
+        margin-top: 5rem;
+        margin-bottom: 0;
+        background-color: rgba($color-dark,.6);
+
+        @include respondmax(xl){
+            margin-top: 3rem;
+        }
+
+        @include respondmax(lg){
+            margin-top: 1.5rem;
+        }
+
+        @include respondmax(sm){
+            margin-top: .7rem;
+        }
+
+    }
+
+    &__mail,&__call{
+        border: none;
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+        @include font($rbrgl,1.6rem,$color-white);
+        width: 70%;
+        height: 8rem;
+        padding: 0 1.5rem;
+
+        &::placeholder{
+            color: $color-white;
+        }
+
+        @include respondmax(xl){
+            width: 65%;
+            height: 6rem;
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(lg){
+           width: 55%;
+            height: 5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__mailButton,&__callButton{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 15%;
+        height: 8rem;
+        &:focus{
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "abstracts/bt5start";
+  
+@import "abstracts/function";
+@import "abstracts/mixin";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/fonts";
+
+@import "components/button"; 
+@import "components/navigation"; 
+@import "components/sosialGroup"; 
+@import "components/mobilNavigation"; 
+@import "components/homeServiceCards"; 
+@import "components/titles"; 
+@import "components/lines"; 
+@import "components/newsCard"; 
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/topMenu";
+@import "layout/homeSlider";
+@import "layout/homeService";
+@import "layout/homeInformation";
+@import "layout/homeMessage";
+@import "layout/homeNews";
+@import "layout/topFooter";
+@import "layout/footerNav";
+@import "layout/pagesTop";
+
+@import "pages/contact";
+@import "pages/newsDetail";
+@import "pages/galery";
+@import "pages/news" ;
+
+
+@import "abstracts/bt5end";
+    

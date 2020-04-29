@@ -1,0 +1,116 @@
+.homeNews {
+    padding: 5rem 0;
+
+    @include respondmax(lg) {
+        padding: 3rem 0;
+    }
+
+    @include respondmax(md) {
+        padding: 1.8rem 0;
+    }
+
+    @include respondmax(sm) {
+        padding: 1.2rem 0;
+    }
+
+    &__linkGroup {
+        text-align: center;
+        border: 1px solid $color-grey-light;
+        height: 8rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-white;
+        transition: all 0.4s;
+        @include respondmax(xl) {
+            width: 60%;
+        }
+
+        @include respondmax(lg) {
+            width: 60%;
+            height: 5rem;
+        }
+
+        @include respondmax(sm) {
+            width: 90%;
+            height: 3.5rem;
+        }
+
+        &:hover {
+            background-color: $color-pink-dark;
+            box-shadow: 0 0 15px rgba($color-dark, 0.4);
+            cursor: pointer;
+            .linkHover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__newsLink {
+        @include font($rbrgl, 1.7rem, $color-secondary);
+        transition: all 0.4s;
+
+        @include respondmax(xl) {
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 1.2rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1rem;
+        }
+        & img {
+            transition: all 0.3s;
+            @include respondmax(lg) {
+                height: 4rem;
+            }
+
+            @include respondmax(sm) {
+                height: 2.5rem;
+            }
+        }
+        &:hover {
+            color: $color-white !important;
+            text-decoration: none;
+
+            & img {
+                margin-left: 0.6rem !important;
+            }
+        }
+    }
+
+    &__subscrime {
+        @include font($rbrgl, 1.7rem, $color-secondary);
+        margin-left: 3rem;
+        transition: all 0.4s;
+        @include respondmax(xl) {
+            font-size: 1.4rem;
+        }
+        @include respondmax(lg) {
+            font-size: 1.2rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1rem;
+        }
+        & img {
+            transition: all 0.3s;
+            @include respondmax(lg) {
+                height: 4rem;
+            }
+            @include respondmax(sm) {
+                height: 2.5rem;
+            }
+        }
+        &:hover {
+            color: $color-white !important;
+            text-decoration: none;
+            & img {
+                margin-left: 0.6rem !important;
+            }
+        }
+    }
+}

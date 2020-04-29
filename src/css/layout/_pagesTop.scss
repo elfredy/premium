@@ -1,0 +1,44 @@
+.pagesTop{
+    background:linear-gradient(to left bottom rgba($color-dark,.4),rgba($color-dark,.4)),
+    url('../../img/pagetop.png');
+    height: 19rem;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+    @include respondmax(xl){
+        height: 16rem;
+    }
+    @include respondmax(lg){
+        height: 14rem;
+    }
+
+    @include respondmax(md){
+        height: 10rem;
+    }
+
+    @include respondmax(sm){
+        height: 6rem;
+    }
+
+    &__title{
+        @include font($rblg,7rem,$color-white);
+        text-transform: uppercase;
+        font-style: italic;
+        @include respondmax(xl){
+            font-size: 5rem;
+        }
+        @include respondmax(lg){
+             font-size: 3.6rem;
+        }
+    
+        @include respondmax(md){
+            font-size: 2.4rem;
+        }
+    
+        @include respondmax(sm){
+             font-size: 1.8rem;
+        }
+    
+    }
+}

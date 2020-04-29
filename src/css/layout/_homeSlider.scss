@@ -1,0 +1,131 @@
+.homeSlider {
+
+
+    z-index: 1;
+    //height: 78rem;
+
+    &__link {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 78rem;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        @include respondmax(xl) {
+            height: 50rem;
+        }
+
+        @include respondmax(lg) {
+            height: 35rem;
+        }
+
+        @include respondmax(md) {
+            height: 25rem;
+        }
+
+        @include respondmax(sm) {
+            height: 20rem;
+        }
+
+        &::before {
+            box-shadow: inset 0 0 40px 30px rgba($color-dark, 0.6);
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-dark, 0.22);
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__titles {
+        position: absolute;
+        top: 50%;
+        z-index: 3;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 50%;
+        text-align: center;
+    }
+
+    &__title {
+        @include font($rbitc, 7rem, $color-white);
+        text-transform: uppercase;
+        @include respondmax(xl) {
+            font-size: 5rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 3.6rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 2.4rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.6rem;
+        }
+
+        &--2 {
+            @include font($rbitc, 2rem);
+            text-transform: none;
+
+            @include respondmax(xl) {
+                font-size: 1.8rem;
+            }
+
+            @include respondmax(lg) {
+                font-size: 1.6rem;
+            }
+
+            @include respondmax(md) {
+                font-size: 1.4rem;
+            }
+
+            @include respondmax(sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    & .owl-dots {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & .owl-dot {
+            border: 3px solid $color-primary;
+            padding: 2px !important;
+            font: inherit;
+            margin: 3px;
+            background: $color-primary;
+            outline: none;
+            &:hover {
+                border: 3px solid $color-white;
+                background: $color-white;
+            }
+        }
+
+        & .active {
+            border: 3px solid $color-white;
+            background: $color-white;
+        }
+    }
+}

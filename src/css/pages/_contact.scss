@@ -1,0 +1,211 @@
+.contact {
+    background-color: $color-white;
+
+    &__left {
+        padding: 3rem 3rem 0 5rem;
+        height: 77rem;
+        width: 100%;
+        position: relative;
+
+        @include respondmax(xl) {
+            height: 55rem;
+            padding: 2rem 2rem 0 3.5rem;
+        }
+
+        @include respondmax(lg) {
+            height: 40rem;
+            padding: 1.5rem 1.5rem 0 2.5rem;
+        }
+
+        @include respondmax(md) {
+            height: 32rem;
+            padding: 1rem 1rem 0 2rem;
+        }
+        @include respondmax(sm) {
+            height: 36rem;
+        }
+    }
+    &__right {
+        padding: 0;
+        width: 100%;
+        height: 77rem;
+        @include respondmax(xl) {
+            height: 55rem;
+        }
+
+        @include respondmax(lg) {
+            height: 40rem;
+        }
+
+        @include respondmax(md) {
+            height: 32rem;
+        }
+        @include respondmax(sm) {
+            height: 20rem;
+        }
+    }
+
+    &__map {
+        width: 99.9%;
+        height: 100%;
+    }
+
+    &__title {
+        @include font($rbrgl, 2.5rem, $color-secondary);
+        text-transform: uppercase;
+        margin: 2rem 0;
+        & strong {
+            color: $color-pink-dark;
+        }
+
+        @include respondmax(xl) {
+            font-size: 2rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+        }
+
+        @include respondmax(md) {
+            font-size: 1.6rem;
+            margin: 1rem 0;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: 0 4rem 0 2rem;
+
+        @include respondmax(xl) {
+            padding: 0 3rem 0 1.6rem;
+        }
+
+        @include respondmax(lg) {
+            padding: 0 2rem 0 1.4rem;
+        }
+
+        @include respondmax(md) {
+            padding: 0 1.5rem 0 1.2rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 6.5rem;
+        @include font($rbrgl, 1.8rem, $color-secondary);
+        padding-left: 2.5rem;
+        margin-bottom: 4.4rem;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid $color-grey-light;
+
+        @include respondmax(xl) {
+            height: 5rem;
+            margin-bottom: 3rem;
+        }
+
+        @include respondmax(lg) {
+            height: 4rem;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include respondmax(md) {
+            height: 3rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        @include respondmax(sm) {
+            height: 3.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__input:first-child {
+        margin-top: 3rem;
+
+        @include respondmax(xl) {
+            margin-top: 1rem;
+        }
+
+        @include respondmax(lg) {
+            margin-top: 0;
+        }
+    }
+
+    &__message {
+        width: 100%;
+        @include font($rbrgl, 1.8rem, $color-secondary);
+        padding-left: 2.5rem;
+        padding-top: 2rem;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid $color-grey-light;
+        height: 24rem;
+        @include respondmax(xl) {
+            height: 15rem;
+        }
+        @include respondmax(lg) {
+            font-size: 1.6rem;
+            height: 10rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__sendButton {
+        height: 5.6rem;
+        width: 20rem;
+        text-align: center;
+        border: 1px solid $color-primary;
+        outline: none;
+        box-shadow: none;
+        @include font($rbrgl, 2rem, $color-white);
+        background-color: $color-primary;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        right: 7rem;
+
+        @include respondmax(xl) {
+            height: 5rem;
+            right: 5rem;
+        }
+        @include respondmax(lg) {
+            font-size: 1.6rem;
+            width: 16rem;
+            height: 4rem;
+            right: 3.6rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 1.4rem;
+            width: 14rem;
+            right: 2.6rem;
+        }
+
+        @include respondmax(sm) {
+            width: 12rem;
+            font-size: 1.2rem;
+            left: 50%;
+            bottom: 1rem;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            color: $color-pink-dark;
+            background-color: $color-white;
+            border: 1px solid $color-pink-dark;
+            box-shadow: 0 0 10px rgba($color-dark,.7);
+        }
+    }
+}

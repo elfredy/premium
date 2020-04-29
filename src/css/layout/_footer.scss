@@ -1,0 +1,65 @@
+.footer {
+    padding-top: 5rem;
+
+    @include respondmax(lg) {
+        padding-top: 3rem;
+    }
+
+    @include respondmax(md) {
+        padding-top: 1.5rem;
+    }
+
+    &__title {
+        @include font($rblg, 4.8rem, $color-primary);
+        text-align: center;
+        text-transform: uppercase;
+
+        & span {
+            color: $color-pink-dark;
+        }
+
+        @include respondmax(xl) {
+            font-size: 3.6rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 2.4rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 2rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__bottom{
+       // height: 10rem;
+        background-image: url('../../img/footer-img.png');
+        background-position: center;
+        background-size: contain;
+        
+    }
+
+    &__logo{
+        & img{
+            @include respondmax(xl){
+                height: 8rem;
+            }
+
+            @include respondmax(lg){
+                height: 6rem;
+            }
+
+            @include respondmax(md){
+                height: 4.5rem;
+            }
+
+            @include respondmax(sm){
+                height: 3.5rem;
+            }
+        }
+    }
+}

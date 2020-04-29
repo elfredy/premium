@@ -1,0 +1,53 @@
+.myNav {
+    padding: 1.5rem 0;
+    @include respondmax(md){
+        display: none !important;
+        
+    }
+    .nav-item {
+        max-width: 20rem;
+
+        @include respondmax(xl) {
+            max-width: 14rem;
+        }
+
+        @include respondmax(lg) {
+            max-width: 12rem;
+        }
+
+      
+    }
+
+    .nav-link {
+        @include font($rbrgl, 1.8rem, $color-secondary);
+        margin: 0.6rem 0.8rem;
+        padding: 1.2rem .5rem;
+
+        border-top: 2.5px solid transparent;
+        border-bottom: 2.5px solid transparent;
+        transition: all .4s;
+
+
+
+        @include respondmax(xl) {
+            font-size: 1.2rem;
+        }
+
+        @include respondmax(lg) {
+            font-size: 0.8rem;
+        }
+
+          &:hover {
+            color: $color-primary;
+            
+            border-top: 2.5px solid $color-primary;
+            border-bottom: 2.5px solid $color-primary;
+            margin: 1.2rem 0.8rem;
+            padding: .6rem 0.5rem;
+        }
+    }
+
+    .active {
+        color: $color-primary;
+    }
+}
