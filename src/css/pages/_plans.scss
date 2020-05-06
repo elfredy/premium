@@ -1,0 +1,132 @@
+.plansSection {
+    padding: 5rem 0;
+}
+
+.plans {
+    width: 100%;
+    padding: 100px 0;
+
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.22);
+    position: relative;
+    &__photobox {
+        width: 60%;
+        margin: 0 auto;
+    }
+    &__toolbox {
+        display: flex;
+        justify-content: space-around;
+        width: calc(100% / 3);
+        padding: 15px;
+        border: 2px solid #eee;
+        background-color: #fff;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+
+        @include respondmax(lg) {
+            width: calc(100% / 2);
+        }
+        
+        @include respondmax(lg) {
+            width: calc(100% / 1.2);
+        }
+
+        &--top {
+            top: -32px;
+            .select-custom {
+                width: 40%;
+                position: relative;
+                select {
+                    width: 100%;
+                    border: none;
+                    padding-bottom: 5px;
+                    font-size: 1.8rem;
+                    appearance: none;
+                    background-color: transparent;
+                    background-image: none;
+                    position: relative;
+                    z-index: 10;
+                    color: $color-primary;
+                    cursor: pointer;
+                    @include respondmax(xl) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include respondmax(lg) {
+                        font-size: 1.2rem;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    content: "\f078";
+                    text-align: center;
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 2rem;
+                    font-weight: 900;
+                    color: $color-white;
+                    background-color: $color-primary;
+                    line-height: 2;
+                    width: 35px;
+                    height: 35px;
+                    top: -6px;
+                    right: 1px;
+                    @include respondmax(xl) {
+                        font-size: 1.8rem;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @include respondmax(lg) {
+                        font-size: 1.6rem;
+                        width: 25px;
+                        height: 25px;
+                    }
+                    z-index: -10;
+                }
+            }
+        }
+        &--bottom {
+            bottom: -35px;
+        }
+        &-btn {
+            color: $color-primary;
+            font-size: 1.8rem;
+
+            @include respondmax(xl) {
+                font-size: 1.4rem;
+            }
+            @include respondmax(lg) {
+                font-size: 1.2rem;
+            }
+            i {
+                margin-left: 5px;
+                background-color: $color-primary;
+                color: $color-white;
+                font-size: 2rem;
+                font-weight: 700;
+                width: 35px;
+                height: 35px;
+                line-height: 1.7;
+                text-align: center;
+                @include respondmax(xl) {
+                    font-size: 1.8rem;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include respondmax(lg) {
+                    font-size: 1.6rem;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            &:hover {
+                text-decoration: none;
+                color: $color-primary;
+            }
+        }
+    }
+}
