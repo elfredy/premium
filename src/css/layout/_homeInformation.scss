@@ -35,6 +35,9 @@
     }
 
     &__texts {
+        @include respondmax(sm){
+            padding: 0 1.2rem;
+        }
         & p {
             @include font($rblg, 1.7rem, $color-secondary);
             margin: 2rem 0;
@@ -55,7 +58,7 @@
             }
 
             @include respondmax(sm) {
-                font-size: 1.1rem;
+                font-size: 1.3rem;
                 margin: 1rem 0;
             }
         }
@@ -65,10 +68,11 @@
         display: inline-block;
         text-align: center;
         text-decoration: none;
-        @include font($rbrgl, 1.8rem, $color-secondary);
+        @include font($rbrgl, 1.8rem, $color-pink-dark);
         margin: 2rem 0;
         border: 1px solid $color-grey-light;
-        padding: 1rem 2rem;
+        padding:2rem;
+        padding-left: 10rem;
         background-color: $color-white;
         transition: all 0.3s;
         box-shadow: 0 0 10px transparent;
@@ -77,18 +81,21 @@
             font-size: 1.6rem;
             margin: 1.8rem 0;
             padding: 0.8rem 1.8rem;
+            padding-left: 7rem;
         }
 
         @include respondmax(lg) {
             font-size: 1.4rem;
             margin: 1.5rem 0;
             padding: 0.6rem 1.6rem;
+            padding-left: 6rem;
         }
 
         @include respondmax(md) {
             font-size: 1.2rem;
             margin: 1.2rem 0;
-            padding: 0.3rem 1.2rem;
+            padding: 0.6rem 1.2rem;
+            padding-left: 6rem;
         }
 
         & img {
@@ -104,13 +111,20 @@
 
             @include respondmax(md) {
                 margin-left: 0.5rem;
+                width: 3rem;
             }
         }
 
         &:hover {
-            color: $color-pink-dark;
-            border: 1px solid $color-primary;
-            box-shadow: 0 0 10px rgba($color-secondary, 0.6);
+            color: $color-secondary;
+            
+            box-shadow: 0 5px 13px 2px rgba($color-secondary, 0.3);
+            transform: translateY(-5px);
+        }
+
+        &:active,&:focus{
+            transform: translateY(0);
+            box-shadow: 0 0 13px -2px rgba($color-secondary, 0.4);
         }
     }
 }

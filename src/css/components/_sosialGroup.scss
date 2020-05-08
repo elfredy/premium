@@ -3,10 +3,11 @@
     justify-content: space-between;
 
     @include respondmax(md){
-        display: inline-block;
+        /* position: absolute;
+        top: 65%; */
+        width: 100%;
+        justify-content: center;
     }
-
-
     .langLink__item {
         @include font($rbrgl, 1.8rem, $color-primary);
         text-decoration: none;
@@ -19,11 +20,19 @@
             font-size: .8rem;
         }
 
+        @include respondmax(md){
+            font-size: 1.4rem;
+        }
+
        
         transition: all 0.3s;
         &:hover {
             color: $color-pink-dark;
            text-decoration: underline;
+
+           @include respondmax(md){
+               color: $color-secondary;
+           }
         }
 
         &:not(:last-child)::after{
@@ -33,10 +42,16 @@
 
         &:not(:last-child){
             margin-right: .8rem;
+
+           
         }
 
         &:not(:first-child){
             margin-left: auto;
+
+            @include respondmax(md){
+                margin-left: 0;
+            }
         }
 
         
@@ -51,6 +66,13 @@
     margin-top: .6rem;
     transition: all .3s;
 
+    @include respondmax(md){
+        position: absolute;
+        bottom: 3.5rem;
+        width: 100%;
+        justify-content: space-around;
+    }
+
     &__item{
         
         &:hover{
@@ -64,7 +86,5 @@
         }
     }
 
-    @include respondmax(md){
-        display: inline-block;
-    }
+  
 }

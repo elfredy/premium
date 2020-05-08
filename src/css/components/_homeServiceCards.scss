@@ -4,6 +4,12 @@
     background-color: $color-white;
     transition: all 0.3s;
 
+    @include respondmax(sm){
+       
+       position: relative;
+       height: 36rem;      
+    }
+
     &__text,
     &__img,
     &__map {
@@ -46,7 +52,7 @@
 
     .titleLine {
         background-color: $color-primary;
-        height: 0.25rem;
+        height: 0.2rem;
         max-width: 12rem;
         margin: 2rem 0;
         margin-left: -1.2rem;
@@ -55,6 +61,7 @@
 
     &__text {
         padding: 3.5rem 4rem 3.5rem 4.5rem;
+
 
         & p {
             @include font($rblg, 1.6rem, $color-secondary);
@@ -74,6 +81,7 @@
 
             @include respondmax(sm){
                 max-height: 12rem;
+                font-size: 1.3rem;
             }
 
         }
@@ -85,10 +93,23 @@
         @include respondmax(lg) {
             padding: 1.5rem 2rem 1.5rem 2.5rem;
         }
+
+        @include respondmax(sm){
+            position: absolute;
+            top: 18rem;
+            width: 100%;
+            left: 0;
+        }
     }
 
     &__img {
         position: relative;
+
+        @include respondmax(sm){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     &__overlay {
@@ -122,6 +143,10 @@
         .fakeButton {
             opacity: 1;
             right: 0;
+
+            @include respondmax(md){
+                right: 2%;
+            }
         }
 
         .homeServiceCards__text p {

@@ -11,12 +11,13 @@
     &__photobox {
         width: 60%;
         margin: 0 auto;
+        text-align: center;
     }
     &__toolbox {
         display: flex;
         justify-content: space-around;
-        width: calc(100% / 3);
-        padding: 15px;
+        width: calc(100% / 2.5);
+        padding: 2rem;
         border: 2px solid #eee;
         background-color: #fff;
         left: 50%;
@@ -26,7 +27,7 @@
         @include respondmax(lg) {
             width: calc(100% / 2);
         }
-        
+
         @include respondmax(lg) {
             width: calc(100% / 1.2);
         }
@@ -62,16 +63,11 @@
                 }
                 &:after {
                     position: absolute;
-                    content: "\f078";
-                    text-align: center;
-                    font-family: "Font Awesome 5 Free";
-                    font-size: 2rem;
-                    font-weight: 900;
-                    color: $color-white;
-                    background-color: $color-primary;
-                    line-height: 2;
-                    width: 35px;
-                    height: 35px;
+                    content: "";
+                    background-image: url('../../img/select.png');
+                    background-position: center;
+                    width: 40px;
+                    height: 40px;
                     top: -6px;
                     right: 1px;
                     @include respondmax(xl) {
@@ -90,27 +86,29 @@
         }
         &--bottom {
             bottom: -35px;
+            
         }
         &-btn {
             color: $color-primary;
             font-size: 1.8rem;
-
+            position: relative;
             @include respondmax(xl) {
                 font-size: 1.4rem;
             }
             @include respondmax(lg) {
                 font-size: 1.2rem;
             }
-            i {
-                margin-left: 5px;
-                background-color: $color-primary;
-                color: $color-white;
-                font-size: 2rem;
-                font-weight: 700;
-                width: 35px;
-                height: 35px;
-                line-height: 1.7;
-                text-align: center;
+            &:after {
+                position: absolute;
+                content: "";
+                background-image: url('../../img/arrowdown.png');
+                //background-color: $color-primary;
+                background-position: center;
+                line-height: 2;
+                width: 40px;
+                height: 40px;
+                top: -6px;
+                right: -6rem;
                 @include respondmax(xl) {
                     font-size: 1.8rem;
                     width: 30px;
@@ -126,6 +124,12 @@
             &:hover {
                 text-decoration: none;
                 color: $color-primary;
+            }
+
+            &--1{
+                &:after{
+                    background-image: url('../../img/boyut.png');
+                }
             }
         }
     }

@@ -9,14 +9,14 @@
         }
 
         @include respondmax(lg) {
-            margin: 2rem;
+            margin: 2rem 0;
         }
 
         @include respondmax(md) {
-            margin: 1.6rem;
+            margin: 1.6rem 0;
         }
 
         @include respondmax(sm) {
-            margin: 1rem;
+            margin: 1rem 0;
         }
 }

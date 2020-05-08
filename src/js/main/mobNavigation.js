@@ -15,7 +15,7 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function () {
+/* $(document).ready(function () {
 	var winWith = $(window).width();
   
 	function resize() {
@@ -31,4 +31,4 @@ $(document).ready(function () {
   
 	resize()
   
-  });
+  }); */

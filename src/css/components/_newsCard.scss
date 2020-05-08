@@ -17,7 +17,7 @@
     }
 
     @include respondmax(sm){
-        height: 28rem;
+        height: 30rem;
     }
 
     &__left {
@@ -29,7 +29,7 @@
         }
 
         @include respondmax(md){
-            height: 14rem;
+            height: 15rem;
         }
     }
 
@@ -59,9 +59,9 @@
         }
 
         @include respondmax(md){
-            height: 14rem;
+            height: 15rem;
             padding: 1.8rem 0 0 1.8rem;
-
+            overflow: hidden;
         }
 
         & .span {
@@ -87,7 +87,10 @@
 
             @include respondmax(md){
                 font-size: 1.1rem;
-                
+            }
+
+            @include respondmax(sm){
+                font-size: 1.3rem;
             }
         }
     }
@@ -117,6 +120,10 @@
         .fakeButton {
             right: 0;
             opacity: 1;
+
+            @include respondmax(md){
+                right: 2%;
+            }
         }
 
         .newsCard__title {

@@ -1,5 +1,5 @@
 .fakeButton {
-    width: 50%;
+    width: 13rem;
     position: absolute;
     bottom: 5%;
     right: 10%;
@@ -15,6 +15,6 @@
     }
 
     @include respondmax(md) {
-        width: 80%;
+        width: 11rem;
     }
 }
